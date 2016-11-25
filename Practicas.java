@@ -60,6 +60,26 @@ public class Practicas
     public static void numeroprimo ()
     {
         //Saber si un número es primo o no.
+           int i,j=0;
+           boolean esPrimo;
+           Scanner sc = new Scanner(System.in);
+           System.out.println("Dame un numero ");
+           int numero =sc.nextInt();
+         for(i=0; i<=numero; i++)
+         {
+             if(numero%i==0)
+             {
+                 j++;
+
+             }
+         }
+        if(j==2)
+        {
+            System.out.println("Numero primo");
+        }else
+        {
+            System.out.println("numero no primo");
+        }
     }
     
     public static void sumaprimosnam ()
