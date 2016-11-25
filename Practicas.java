@@ -45,7 +45,37 @@ public class Practicas
     
     public static void sumaprimosnam ()
     {
-        //Sumanr números primos en un rango de N a M dados por el usuario.
+        int i,j,suma=0;
+  boolean esPrimo;
+ Scanner sc = new Scanner(System.in);
+     System.out.println("Dame el rango inicial");
+     int rInicial=sc.nextInt();
+     System.out.println("Dame el rango final");
+     int rFinal=sc.nextInt();
+  //Rango inicial, este debe ser mayor de 1.
+
+  for(i = rInicial;i <= rFinal;i++){
+  
+      esPrimo=true;// 
+       for(j = 2;j < i;j++){
+   
+   
+     
+       if(i % j == 0){
+        
+          esPrimo = false;
+       }
+       }
+       if(esPrimo){
+           
+        System.out.println(i+"\n");
+        suma=suma+i;
+           
+       }
+     
+  }
+    System.out.println("la suma de los primos es "  + suma );
+ }
     }
     
     public static void sumanam ()
