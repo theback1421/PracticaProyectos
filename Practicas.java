@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Practicas
     
@@ -97,7 +98,19 @@ public class Practicas
     
     public static void maschicoarreglo ()
     {
-        //Obtener el número más chico de un arreglo de 10 posiciones de números aleatorios.
+        Random  rnd = new Random();
+      int menor;
+      int arre[]= new int[10];
+        for (int i = 0; i < 10; i++) {
+            arre[i]=rnd.nextInt(99);
+        }
+        menor=arre[0];
+        for (int i = 1; i < arre.length; i++) {
+            if(arre[i]<menor){
+                menor=arre[i];
+            }
+        }
+        System.out.println("El numero menor es: "+menor);
     }
     
     public static void numeroprimo ()
