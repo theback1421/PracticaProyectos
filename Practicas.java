@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Scanner;
 
 public class Practicas
 {
@@ -18,10 +19,14 @@ public class Practicas
         String s1, s2;
         System.out.println("Introduzca una palabra");
         frase = new StringBuffer(entrada.nextLine());
-        while (pos < frase.length()) {
-            if (!Character.isLetter(frase.charAt(pos))) {
+        while (pos < frase.length())
+        {
+            if (!Character.isLetter(frase.charAt(pos)))
+            {
                 frase.deleteCharAt(pos);
-            } else {
+            } 
+            else 
+            {
                 pos++;
             }
         }
@@ -29,9 +34,12 @@ public class Practicas
         inversa.reverse();
         s1 = frase.toString();
         s2 = inversa.toString();
-        if (s1.equalsIgnoreCase(s2)) {
+        if (s1.equalsIgnoreCase(s2)) 
+        {
             System.out.println("La palabra introducida es un palíndromo.");
-        } else {
+        }
+        else 
+        {
             System.out.println("La palabra introducida no es un palíndromo.");
         }
     }
@@ -52,23 +60,25 @@ public class Practicas
     {
         Scanner sc = new Scanner(System.in);
         int numero,fibo1,fibo2,i;
-        do{
+        do
+        {
             System.out.print("Ingrese un numero mayor que 1: ");
             numero = sc.nextInt();
-        }while(numero<=1);
+        }
+        while(numero<=1);
         System.out.println("Los " + numero + " primeros términos de la serie de Fibonacci son:"); 
 
         fibo1=1;
         fibo2=1; 
 
         System.out.print(fibo1 + " ");
-        for(i=2;i<=numero;i++){
+        for(i=2;i<=numero;i++)
+        {
              System.out.print(fibo2 + " ");
              fibo2 = fibo1 + fibo2;
              fibo1 = fibo2 - fibo1;
         }
         System.out.println();
-    }
         //Fibonacci de X número.
     }
     
@@ -80,19 +90,18 @@ public class Practicas
     public static void numeroprimo ()
     {
         //Saber si un número es primo o no.
-           int i,j=0;
-           boolean esPrimo;
-           Scanner sc = new Scanner(System.in);
-           System.out.println("Dame un numero ");
-           int numero =sc.nextInt();
-         for(i=0; i<=numero; i++)
-         {
-             if(numero%i==0)
-             {
-                 j++;
-
-             }
-         }
+        int i,j=0;
+        boolean esPrimo;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Dame un numero ");
+        int numero =sc.nextInt();
+        for(i=0; i<=numero; i++)
+        {
+            if(numero%i==0)
+            {
+                j++;
+            }
+        }
         if(j==2)
         {
             System.out.println("Numero primo");
@@ -105,45 +114,42 @@ public class Practicas
     public static void sumaprimosnam ()
     {
         int i,j,suma=0;
-  boolean esPrimo;
- Scanner sc = new Scanner(System.in);
-     System.out.println("Dame el rango inicial");
-     int rInicial=sc.nextInt();
-     System.out.println("Dame el rango final");
-     int rFinal=sc.nextInt();
-  //Rango inicial, este debe ser mayor de 1.
+        boolean esPrimo;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Dame el rango inicial");
+        int rInicial=sc.nextInt();
+        System.out.println("Dame el rango final");
+        int rFinal=sc.nextInt();
+        //Rango inicial, este debe ser mayor de 1.
 
-  for(i = rInicial;i <= rFinal;i++){
-  
-      esPrimo=true;// 
-       for(j = 2;j < i;j++){
-   
-   
-     
-       if(i % j == 0){
-        
-          esPrimo = false;
-       }
-       }
-       if(esPrimo){
-           
-        System.out.println(i+"\n");
-        suma=suma+i;
-           
-       }
-     
-  }
-    System.out.println("la suma de los primos es "  + suma );
- }
+        for(i = rInicial;i <= rFinal;i++)
+        {
+            esPrimo=true;// 
+            for(j = 2;j < i;j++)
+            {
+                if(i % j == 0)
+                {
+                    esPrimo = false;
+                }
+            }
+            if(esPrimo)
+            {
+                System.out.println(i+"\n");
+                suma=suma+i;
+            }
+        }
+        System.out.println("la suma de los primos es "  + suma );
     }
+    
     
     public static void sumanam ()
     {
         //Sumanr números en un rango de N a M dados por el usuario.
     }
     
-    public static void main (string args[]) throws IOException
+    public static void main (String args[]) throws IOException
     {
+        String opcion = "";
         do
         {
             System.out.println("Factorial de un número........[1]");
@@ -194,6 +200,6 @@ public class Practicas
                  sumanam();
             }
         }
-        while(!opcion.equals("e"));
+        while(!opcion.equals('e'));
     }
 }
