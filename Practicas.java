@@ -103,6 +103,7 @@ public class Practicas
       int arre[]= new int[10];
         for (int i = 0; i < 10; i++) {
             arre[i]=rnd.nextInt(99);
+            System.out.println(" "+arre[i]);
         }
         menor=arre[0];
         for (int i = 1; i < arre.length; i++) {
