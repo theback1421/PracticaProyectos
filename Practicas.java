@@ -12,8 +12,28 @@ public class Practicas
     
     public static void palindromo ()
     {
-        //Obtener el palíndromo de una palabra, ejem: oso, reconocer, etc.
-        
+        Scanner entrada = new Scanner(System.in);
+        int pos = 0;
+        StringBuffer frase, inversa;
+        String s1, s2;
+        System.out.println("Introduzca una palabra");
+        frase = new StringBuffer(entrada.nextLine());
+        while (pos < frase.length()) {
+            if (!Character.isLetter(frase.charAt(pos))) {
+                frase.deleteCharAt(pos);
+            } else {
+                pos++;
+            }
+        }
+        inversa = new StringBuffer(frase);
+        inversa.reverse();
+        s1 = frase.toString();
+        s2 = inversa.toString();
+        if (s1.equalsIgnoreCase(s2)) {
+            System.out.println("La palabra introducida es un palíndromo.");
+        } else {
+            System.out.println("La palabra introducida no es un palíndromo.");
+        }
     }
     
     public static void promedionumeros ()
