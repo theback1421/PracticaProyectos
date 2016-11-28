@@ -169,9 +169,19 @@ public class Practicas
     }
     
     
-    public static void sumanam ()
+    public static void sumanam ()throws IOException
     {
         //Sumanr números en un rango de N a M dados por el usuario.
+        System.out.println("Dame el rango inicial: ");
+        int ini = Integer.parseInt(entra.readLine());
+        System.out.println("Dame el rango final: ");
+        int fin = Integer.parseInt(entra.readLine());
+        int suma = 0;
+        for(int i=ini; i<=fin; i++)
+        {
+            suma = suma + i;
+        }
+        System.out.println("La suma es: "+suma);
     }
     
     public static void main (String args[]) throws IOException
