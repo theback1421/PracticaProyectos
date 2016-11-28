@@ -67,7 +67,17 @@ public class Practicas
     public static void masgrandearreglo ()
     {
         //Obtener el número más grande de un arreglo de 10 posiciones de números aleatorios.
-        
+    Scanner sc = new Scanner(System.in);
+    int numero = 0;
+    int numeromasgrande = 0;    
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Ingrese un numero ");
+            numero = sc.nextInt();
+            if (numero > numeromasgrande) {
+                numeromasgrande = numero;
+            }
+        }
+        System.out.println("el numero mas grande del arreglo es " + numeromasgrande);
     }
     
     public static void fibonacci ()
