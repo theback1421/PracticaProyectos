@@ -5,7 +5,7 @@ public class Practicas
     
 {
 
-    static BufferedReader entra = new BufferedReader (new InputStreamReader (System.in());
+    static BufferedReader entra = new BufferedReader (new InputStreamReader(System.in));
     public static void factorial ()
     {
         //Factorial de x número.
