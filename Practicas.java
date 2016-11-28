@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Practicas
+    
 {
 
     static BufferedReader entra = new BufferedReader (new InputStreamReader (System.in());
@@ -47,6 +48,18 @@ public class Practicas
     public static void promedionumeros ()
     {
         //Obtener el promedio de números de N a M.
+            Scanner in = new Scanner(System.in);
+        int x; 
+        int i; 
+        int suma=0;
+        double promedio;
+        System.out.println("Digite la cantidad de numeros");
+        x = Integer.parseInt(in.next());
+            for(i = 0;i < x;i++){  
+                System.out.println("Digite un numero"); 
+                suma = suma + Integer.parseInt(in.next()); 
+            } promedio = suma/x; 
+        System.out.println("El promedio de los numeros es: "+promedio);  
         
     }
     
