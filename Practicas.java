@@ -108,7 +108,7 @@ public class Practicas
         Scanner sc = new Scanner(System.in);
         System.out.println("Dame un numero ");
         int numero =sc.nextInt();
-        for(i=0; i<=numero; i++)
+        for(i=1; i<=numero; i++)
         {
             if(numero%i==0)
             {
